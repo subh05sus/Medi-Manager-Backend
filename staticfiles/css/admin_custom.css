@@ -1,0 +1,36 @@
+/* admin_custom.css */
+.field-morning_slots, .field-afternoon_slots, .field-evening_slots {
+    width: 50px;
+    text-align: center;
+}
+
+.inline-related .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.inline-related .form-row .field-morning_start_time, 
+.inline-related .form-row .field-afternoon_start_time, 
+.inline-related .form-row .field-evening_start_time,
+.inline-related .form-row .field-morning_end_time, 
+.inline-related .form-row .field-afternoon_end_time, 
+.inline-related .form-row .field-evening_end_time {
+    margin-right: 20px;
+}
+
+.inline-related .form-row .field-morning_slots_is_active, 
+.inline-related .form-row .field-afternoon_slots_is_active, 
+.inline-related .form-row .field-evening_slots_is_active,
+.inline-related .form-row .field-is_active {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.tag-span {
+    background-color: #e4e4e4;
+    padding: 3px 8px;
+    border-radius: 15px;
+    margin-right: 5px;
+    font-size: smaller;
+}

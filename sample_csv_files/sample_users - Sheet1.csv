@@ -1,0 +1,14 @@
+first_name,last_name,email,password,phone_number,aadhar,address,postal_code
+Patient1,Pt1_Lastname,patient1@example.com,alpine12,1234567890,123456789012345678,Patient1 Address,123456
+Patient2,Pt2_Lastname,patient2@example.com,alpine12,2345678901,234567890123456789,Patient2 Address,234567
+Patient3,Pt3_Lastname,patient3@example.com,alpine12,3456789012,345678901234567890,Patient3 Address,345678
+Patient4,Pt4_Lastname,patient4@example.com,alpine12,4567890123,456789012345678901,Patient4 Address,456789
+Patient5,Pt5_Lastname,patient5@example.com,alpine12,5678901234,567890123456789012,Patient5 Address,567890
+Patient6,Pt6_Lastname,patient6@example.com,alpine12,6789012345,678901234567890123,Patient6 Address,678901
+Patient7,Pt7_Lastname,patient7@example.com,alpine12,7890123456,789012345678901234,Patient7 Address,789012
+Doctor1,Dr1_Lastname,doctor1@example.com,alpine12,1111111111,123456789012345678,Doctor1 Address,123456
+Doctor2,Dr2_Lastname,doctor2@example.com,alpine12,1222222222,234567890123456789,Doctor2 Address,234567
+Doctor3,Dr3_Lastname,doctor3@example.com,alpine12,1333333333,345678901234567890,Doctor3 Address,345678
+Receptionist1,Recep1_Lastname,receptionist1@example.com,alpine12,1444444444,,, 
+Receptionist2,Recep2_Lastname,receptionist2@example.com,alpine12,1555555555,,,
+Receptionist3,Recep3_Lastname,receptionist3@example.com,alpine12,1666666666,,, 

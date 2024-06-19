@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background-color: #f0f0f0; */
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .header {
+            top: 0;
+            position: fixed;
+            width: 100%;
+            background-color: #d8e2e7;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .doctor-entity-info {
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the start of the container */
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 20px; /* Adds padding to the left, adjust as needed */
+}
+
+.doctor-info {
+    margin-right: 50px; /* Adjusts spacing between doctor and clinic info */
+}
+
+
+        .footer {
+            position: fixed;
+            /* Fixed position */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Anchored to the bottom */
+            width: 100%;
+            background-color: #d8e2e7;
+            /* Same color as header */
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            z-index: 10;
+            /* Make sure it's above all other content */
+        }
+
+
+        .header-line {
+            border-bottom: 0.3px solid black;
+            /* Solid black border for header line */
+            margin: 5px 0;
+        }
+
+        .divider-line {
+            border-bottom: 2px dotted grey;
+            /* Dotted grey border for divider line */
+            margin: 5px 0;
+        }
+
+        .title-spacing {
+            height: 25px;
+            /* Adjust this value as needed to create space for the title */
+            display: block;
+        }
+
+        .content {
+            background: #fff;
+            padding: 20px;
+            margin-top: 100px;
+            /* Adjusted top margin to account for fixed header */
+            margin-bottom: 60px;
+            padding-bottom: 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .patient-info,
+        .vitals-symptoms {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .patient-info>div,
+        .vitals-symptoms>div {
+            width: 48%;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 10%;
+        }
+
+        th,
+        td {
+            border: 1px solid rgb(45, 45, 45);
+            /* Setting border color to black */
+            padding: 8px;
+            text-align: left;
+        }
+
+        table,
+        th,
+        td {
+            background-color: transparent;
+        }
+
+        th,
+        td {
+            width: calc(2%);
+            /* Adjust this value as needed */
+        }
+
+
+        .medicines-table {
+            margin: auto;
+        }
+
+        .footer-sign {
+            display: {
+                % if doctor_prescription_settings.doctor_signature_is_visible %
+            }
+
+            block {
+                % else %
+            }
+
+            none {
+                % endif %
+            }
+
+            ;
+
+            text-align: {
+                % if doctor_prescription_settings.doctor_signature_alignment=='right' %
+            }
+
+            right {
+                % else %
+            }
+
+            left {
+                % endif %
+            }
+
+            ;
+            position: fixed;
+            right: 20px;
+            bottom: 70px;
+        }
+
+        .footer-note {
+            text-align: center;
+            position: fixed;
+            bottom: 7px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="doctor-entity-info">
+            <div class="doctor-info">
+                <b>{{ doctor_prescription_settings.doctor_name }}</b><br>
+                {{ doctor_prescription_settings.doctor_qualification }}<br>
+                Registration No: {{ doctor_prescription_settings.registration_number }}
+            </div>
+            <div class="clinic-info">
+                <b>{{ doctor_prescription_settings.entity_name }}</b><br>
+                {{ doctor_prescription_settings.address }}<br>
+                Phone: {{ doctor_prescription_settings.entity_phone_number1 }}
+                {% if doctor_prescription_settings.entity_phone_number2 %}
+                , {{ doctor_prescription_settings.entity_phone_number2 }}
+                {% endif %}
+                <br>
+                Timing: {{ doctor_prescription_settings.entity_startime }} - {{
+                doctor_prescription_settings.entity_endtime }}
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Add this div right after the opening <div class="content"> tag -->
+        <div class="title-spacing">
+            <div class="header-line"></div>
+            <h3 style="text-align: center; margin: 0;">PRESCRIPTION</h3>
+        </div>
+
+        <div class="header-line"></div>
+        <div class="patient-info">
+
+            <div>
+                Patient-ID: {{ patient_details.patient_id }}<br>
+                Patient Name: {{ patient_details.full_name }}<br>
+                Phone: {{ patient_details.phone_number }}
+            </div>
+            <div>
+                Date & Time: {{ current_date_time }}<br>
+                Sex: {{ patient_details.sex }}<br>
+                Age: {{ patient_details.age|default('N/A', true) }}
+            </div>
+        </div>
+        <div class="divider-line"></div>
+        <div class="vitals-symptoms">
+            <div>
+                <div class="section-title">Symptoms</div>
+                <ul>
+                    {% for symptom in symptoms %}
+                    <li>{{ symptom.symptom_name }}: Duration - {{ symptom.duration }}, Severity - {{ symptom.severity }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <div class="section-title">Vital Signs</div>
+                <table>
+                    <tr>
+                        <th>Vital Sign</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Height</td>
+                        <td>{{ vital_signs.height }}</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>{{ vital_signs.weight }}</td>
+                    </tr>
+                    <tr>
+                        <td>BMI</td>
+                        <td>{{ vital_signs.bmi }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="divider-line"></div>
+        <div class="section-title">Findings</div>
+        <p>{{ finding }}</p>
+
+        <div class="divider-line"></div>
+
+        <div class="medicines-table">
+            <div class="section-title" style="display: flex; align-items: center;">
+
+                <a href="https://www.freeiconspng.com/img/25472" title="Image from freeiconspng.com">
+                    <img src="https://www.freeiconspng.com/uploads/rx-icon-13.png" width="40" alt="Vector Icon Rx" style="margin-right: 10px;"/>
+                </a>
+
+                <span>Medicines</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sl no.</th>
+                        <th>Medicine</th>
+                        <th>Dosage</th>
+                        <th>Duration</th>
+                        <th>Instructions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for medicine in medicines %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ medicine.medicine_name }}</td>
+                        <td>{{ medicine.medicine_dosage }}</td>
+                        <td>{{ medicine.medicine_duration }}</td>
+                        <td>{{ medicine.medicine_instructions }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="divider-line"></div>
+        <div class="section-title">Advice</div>
+        <p>{{ diagnosis }}</p>
+        <div class="divider-line"></div>
+        <div class="section-title">Instructions</div>
+        <ul>
+            {% for instruction in instructions %}
+            <li>{{ instruction.instruction }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="footer-sign">
+        <div class="doctor-signature">
+            <b>{{ doctor_prescription_settings.signature_line_1 }}</b><br>
+            {{ doctor_prescription_settings.signature_line_2 }}
+        </div>
+    </div>
+    <!-- <div class="footer">
+        <h1>Thanks for visiting</h1>
+        <h4>POWERED BY MEDYMAN</h4>
+    </div> -->
+
+
+</body>
+
+</html>

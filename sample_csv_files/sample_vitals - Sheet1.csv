@@ -1,0 +1,92 @@
+vital_name,vital_unit
+Heart Rate,bpm
+Blood Pressure - Systolic,mmHg
+Blood Pressure - Diastolic,mmHg
+Respiratory Rate,breaths/min
+Temperature - Oral,Celsius
+Temperature - Rectal,Celsius
+Temperature - Axillary,Celsius
+Oxygen Saturation,%
+Capillary Refill Time,seconds
+Pain Scale (Visual Analog Scale),0-10
+Pain Scale (Numeric Rating Scale),0-10
+Glasgow Coma Scale,points
+Blood Glucose (Fasting),mg/dL
+Blood Glucose (Random),mg/dL
+Hemoglobin,g/dL
+Hematocrit,%
+Platelet Count,10^3/µL
+White Blood Cell Count,10^3/µL
+Red Blood Cell Count,10^6/µL
+Mean Corpuscular Volume (MCV),fL
+Mean Corpuscular Hemoglobin (MCH),pg
+Mean Corpuscular Hemoglobin Concentration (MCHC),g/dL
+Prothrombin Time,seconds
+Partial Thromboplastin Time,seconds
+International Normalized Ratio (INR),ratio
+Arterial Blood Gas (pH),pH
+Arterial Blood Gas (PaO2),mmHg
+Arterial Blood Gas (PaCO2),mmHg
+Arterial Blood Gas (HCO3-),mmol/L
+Arterial Blood Gas (SaO2),%
+Electrocardiogram (ECG) - Heart Rate,bpm
+Electrocardiogram (ECG) - PR Interval,milliseconds
+Electrocardiogram (ECG) - QRS Duration,milliseconds
+Electrocardiogram (ECG) - QT Interval,milliseconds
+Electrocardiogram (ECG) - QTc Interval,milliseconds
+Electrocardiogram (ECG) - ST Segment Elevation,mV
+Electrocardiogram (ECG) - ST Segment Depression,mV
+Electrocardiogram (ECG) - T Wave Amplitude,mV
+Electrocardiogram (ECG) - Axis,degrees
+Body Mass Index (BMI),kg/m^2
+Waist Circumference,cm
+Hip Circumference,cm
+Waist-to-Hip Ratio,--
+Body Fat Percentage,%
+Mid Upper Arm Circumference,cm
+Mid Upper Arm Muscle Area,cm^2
+Mid Upper Arm Fat Area,cm^2
+Head Circumference,cm
+Residual Volume,mL
+Total Lung Capacity,L
+Forced Expiratory Volume in 1 second (FEV1),L
+Forced Vital Capacity (FVC),L
+Tidal Volume,mL
+Functional Residual Capacity,L
+Peak Expiratory Flow Rate (PEFR),L/min
+Forced Expiratory Flow 25%-75% (FEF25-75%),L/s
+Forced Expiratory Flow 50% (FEF50%),L/s
+Forced Expiratory Flow 75% (FEF75%),L/s
+End-Tidal Carbon Dioxide (EtCO2),mmHg
+Intracranial Pressure,mmHg
+Pupil Size (mm),mm
+Pupil Reactivity,mm
+Electroencephalogram (EEG) - Frequency,Hz
+Electroencephalogram (EEG) - Amplitude,μV
+Electroencephalogram (EEG) - Rhythm,--
+Electromyogram (EMG) - Amplitude,μV
+Electromyogram (EMG) - Frequency,Hz
+Electromyogram (EMG) - Rhythm,--
+Electrooculogram (EOG) - Frequency,Hz
+Electrooculogram (EOG) - Amplitude,μV
+Electrooculogram (EOG) - Rhythm,--
+Intraocular Pressure,mmHg
+Skin Temperature,Celsius
+Skin Conductance,μS
+Blood Oxygen Level-dependent (BOLD) Signal,%
+Cerebral Blood Flow (CBF),mL/100g/min
+Cerebral Blood Volume (CBV),mL/100g
+Oxygen Extraction Fraction (OEF),%
+Cerebral Metabolic Rate of Oxygen (CMRO2),μmol/100g/min
+Brain Tissue Oxygen Tension (PbtO2),mmHg
+Regional Cerebral Blood Flow (rCBF),mL/100g/min
+Regional Cerebral Blood Volume (rCBV),mL/100g
+Regional Cerebral Metabolic Rate of Oxygen (rCMRO2),μmol/100g/min
+Regional Brain Tissue Oxygen Tension (PrbtO2),mmHg
+Urine Output,mL/hour
+Stool Output,g/day
+Abdominal Girth,cm
+Cerebrospinal Fluid (CSF) Pressure,mmHg
+Cerebrospinal Fluid (CSF) Glucose,mg/dL
+Cerebrospinal Fluid (CSF) Protein,mg/dL
+Cerebrospinal Fluid (CSF) Cell Count,cells/µL

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultation Report</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      background: #fff;
+      color: #333;
+      line-height: 1.4;
+    }
+    .header, .footer {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .report-section {
+      margin-bottom: 20px;
+      padding: 0 15%; /* Centers content and provides padding */
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px auto; /* Centers the table */
+    }
+    th, td {
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    .instructions {
+      font-style: italic;
+      background: #f9f9f9;
+      padding: 10px;
+      border-left: 4px solid #2196F3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Consultation Report</h1>
+  <!-- Additional header information can go here -->
+</div>
+
+<div class="report-section">
+  <div class="section-title">Symptoms</div>
+  {% for symptom in symptoms %}
+    <p>{{ symptom.symptom_name }} - Duration: {{ symptom.duration }} - Severity: {{ symptom.severity }}</p>
+  {% endfor %}
+</div>
+
+<div class="report-section">
+  <div class="section-title">Finding</div>
+  <p>{{ finding }}</p>
+</div>
+
+<div class="report-section">
+  <div class="section-title">Diagnosis</div>
+  <p>{{ diagnosis }}</p>
+</div>
+
+<div class="report-section">
+  <div class="section-title">Medicines</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Dosage</th>
+        <th>Timing</th>
+        <th>Duration</th>
+        <th>Instructions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for medicine in medicines %}
+      <tr>
+        <td>{{ medicine.medicine_name }}</td>
+        <td>{{ medicine.medicine_dosage }}</td>
+        <td>{{ medicine.medicine_timing }}</td>
+        <td>{{ medicine.medicine_duration }}</td>
+        <td>{{ medicine.medicine_instructions }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="report-section instructions">
+  <div class="section-title">Instructions</div>
+  {% for instruction in instructions %}
+    <p>{{ instruction.instruction }}</p>
+  {% endfor %}
+</div>
+
+<div class="footer">
+  <p>Thank you for choosing our clinic.</p>
+  <!-- Additional footer information can go here -->
+</div>
+
+</body>
+</html>

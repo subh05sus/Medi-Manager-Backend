@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "medimanager-backend",
+  "private_key_id": "6069ca28be90220e235824ca22d7515cf4be1403",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC/YV1/xGQAek+x\nihLQgv7QxKiBh3bKXNdaLJqv3JE/vfnDbnArStSoEa5MUm5wb1Pn1krp5GIuVmqJ\nBve/ETppKlLoV+jbfnhjewSj/s31ooxiZjEuIZ/w8UYx+Jte4JXsKE4PK3ASzkvT\nZh7GApQ/F4E3E5jNqO6r3JgnrJU69ovijfmAj/zq6xpgWsTM9JEgXxnXpaxX0tNg\nF580M05g6eNBUlczu7B8np7XoHaovLHlstwsT0gOrHtS6/AbmC3S+AcovVAjC1Pj\nBTH047MGR8GUyAh1pQMRJ/QoZeohMGd1ddDlcwDu09uv34IoDZg4KJTj+hYShzeu\nV3O20tZVAgMBAAECggEAFVqXVKjEobsEBmLKG6LqLMAsrxs+2XCHhOPCNMovGMYp\nRrGdaW81kDU81f5CnWAGpDEodbWKcPIqe/Sfkx2of1B+JLeeX1Naunrg9y14rKZA\n9L/DUArnbjp1oyDCsVDs2YdbwlyN6kNDeaiE2YIzKWEFhXA11gi57Mo13gNnOUdU\nVQSpd5rSr2qgg8pU5O5ZsfjxPr2PqUJkCZ18F/eBYJ8Asr3wuGHGkCmrYDsfNcU1\nNi2TkW1qWMQhG3tl6waBmR2BOygBIVosNZzkR7rj6jRH5gxd3ie/OfVs4r9di8ig\nfrazbCpntbrkOxFs5pJPWNBJt7fvZqb0Q/EVbDlaIQKBgQD9mu3t9GQ8/wQtMXEK\nNbUbNT5tvnL4r/QTwhAjb1sG5tmObguWUveMqnj5UxdU38uddsP1CNR4JzmkFgPx\nZnZ+5nmPP+MVEZeMA4IDi3nOPxf880rfS7UBkW4W3KPTkvCxXCys69MfEvTjXvau\nDRf6tred2v6K3wyYOJ0RUeSPEQKBgQDBMAMaMHSyhbf7gTA/Q5YervFwKEskJP0k\nneNvUzicVUYlU+AcFNvpo4rj0aRe5WgTEm44aSoyAlp/K4Y4NjXy7HSVd/oGpdxC\n+HzLxVuNdqSAIAScnwl/CEoABLMToJHd20dZrtE7La6xz2zG30etmvC1x2f+/SIf\nyY+yOHFbBQKBgQDHAiDbrgBK7UN1w2qVPHgWFb4bmGvYQxshthO7+tJPpC/s2OY2\n3Hxt4gh0foO8krHRqzUyv+8bKozM+om1kVZDVtDlXJjyG4/0y3vnFDhNZK2KTdDf\nUSWFSX4+an4UtSYzx8U3HQfbRqDtG8Qv6Q58K44DTaqZh1b2zNZUlRLqQQKBgQCx\nrqwbyVd73tsiGmc6uLn5DKSJqLW7z714kTNe7+cQeqniqStmCJVfZYjYErigg1Te\nvcPcZHVnu5xqfKidSNcD0BFGbCvtM13LxupZLPMQwH96THiRaQD98qzFKY1fTv76\nU7VjOhO83z5e0k3U+AXgGbKtLnNrJnzdSbC9lYZE1QKBgDO3MIEYqQTvMAy15E68\nLHKzNhvI5wIXYLXUNLpcNyQ2oNxW1e3Wd6kSnP7WmanKKRGQ832L4OojhK8/aUTo\n74+snFsDBn4p5H4lYL8CHFm1S4DBAF5dxHFRYaTC4tONpSeltNnwKlARtGna+7yX\nkN2H9Spieej+EmDa0qF8iNYm\n-----END PRIVATE KEY-----\n",
+  "client_email": "meddyman-visitor@medimanager-backend.iam.gserviceaccount.com",
+  "client_id": "117570386415122884172",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/meddyman-visitor%40medimanager-backend.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

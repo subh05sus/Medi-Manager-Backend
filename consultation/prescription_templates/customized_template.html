@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prescription</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      line-height: 1.4;
+    }
+    .prescription-header, .prescription-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: top;
+      padding: 20px;
+    }
+    .prescription-header div, .prescription-footer div {
+      width: 48%;
+    }
+    .prescription-header .doctor-info b, .prescription-footer .clinic-info b {
+      font-weight: bold;
+    }
+    .prescription-header .clinic-info, .prescription-footer .doctor-info {
+      text-align: right;
+    }
+    .report-section {
+      border-top: 1px solid #ddd;
+      padding: 20px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    .footer-note {
+      text-align: right;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="prescription-header">
+  {% if doctor_prescription_settings.doctor_info_is_visible %}
+  <div class="doctor-info" style="text-align: {{ doctor_prescription_settings.doctor_info_alignment|lower }}">
+    <b>{{ doctor_prescription_settings.doctor_name }}</b><br>
+    {{ doctor_prescription_settings.doctor_qualification }}<br>
+    Registration No: {{ doctor_prescription_settings.registration_number }}
+  </div>
+  {% endif %}
+  {% if doctor_prescription_settings.entity_info_is_visible %}
+  <div class="clinic-info" style="text-align: {{ doctor_prescription_settings.entity_info_alignment|lower }}">
+    <b>{{ doctor_prescription_settings.entity_name }}</b><br>
+    {{ doctor_prescription_settings.address }}<br>
+    Phone: {{ doctor_prescription_settings.entity_phone_number1 }}
+    {% if doctor_prescription_settings.entity_phone_number2 %}
+    , {{ doctor_prescription_settings.entity_phone_number2 }}
+    {% endif %}
+    <br>
+    {% if doctor_prescription_settings.entity_timing_is_visible %}
+    Timing: {{ doctor_prescription_settings.entity_startime }} - {{ doctor_prescription_settings.entity_endtime }}
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+
+<div class="report-section">
+  <div class="section-title">Patient Information</div>
+  <p>Name: {{ patient_details.full_name }}<br>
+  Phone: {{ patient_details.phone_number }}<br>
+  Sex: {{ patient_details.sex }}<br>
+  Age: {{ patient_details.age|default('N/A', true) }}</p>
+
+  
+  <div class="section-title">Symptoms</div>
+  <ul>
+  {% for symptom in symptoms %}
+    <li>{{ symptom.symptom_name }}: Duration - {{ symptom.duration }}, Severity - {{ symptom.severity }}</li>
+  {% endfor %}
+  </ul>
+  
+  <div class="section-title">Findings</div>
+  <p>{{ finding }}</p>
+  
+  <div class="section-title">Diagnosis</div>
+  <p>{{ diagnosis }}</p>
+
+  <div class="section-title">Medicines</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Medicine</th>
+        <th>Dosage</th>
+        <th>Duration</th>
+        <th>Instructions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for medicine in medicines %}
+      <tr>
+        <td>{{ medicine.medicine_name }}</td>
+        <td>{{ medicine.medicine_dosage }}</td>
+        <td>{{ medicine.medicine_duration }}</td>
+        <td>{{ medicine.medicine_instructions }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+  <div class="section-title">Instructions</div>
+  <ul>
+  {% for instruction in instructions %}
+    <li>{{ instruction.instruction }}</li>
+  {% endfor %}
+  </ul>
+</div>
+
+<div class="prescription-footer">
+  {% if doctor_prescription_settings.doctor_signature_is_visible %}
+  <div class="doctor-signature" style="text-align: {{ doctor_prescription_settings.doctor_signature_alignment|lower }}">
+    {{ doctor_prescription_settings.signature_line_1 }}<br>
+    {{ doctor_prescription_settings.signature_line_2 }}
+  </div>
+  {% endif %}
+</div>
+
+</body>
+</html>

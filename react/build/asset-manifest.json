@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.395d129e.css",
+    "main.js": "/static/js/main.bcceace3.js",
+    "static/js/787.a46c5e3c.chunk.js": "/static/js/787.a46c5e3c.chunk.js",
+    "static/media/Home ideation-7.png": "/static/media/Home ideation-7.3c56bc094a5ec452acdf.png",
+    "static/media/page2.png": "/static/media/page2.5dd8fb9db64de25cffd5.png",
+    "static/media/doctor.png": "/static/media/doctor.fa797b887ad90744e448.png",
+    "static/media/page3.png": "/static/media/page3.7358dd5dc46cf8680e42.png",
+    "static/media/Home ideation-1.png": "/static/media/Home ideation-1.876a5a3a7731350e8115.png",
+    "static/media/Home ideation-8.png": "/static/media/Home ideation-8.5215bb60710fddcb4309.png",
+    "static/media/Medyman_Logo.png": "/static/media/Medyman_Logo.e7e461aa7e54489b33b4.png",
+    "static/media/page1.png": "/static/media/page1.39b90a0a0b2fdf37d5b3.png",
+    "index.html": "/index.html",
+    "main.395d129e.css.map": "/static/css/main.395d129e.css.map",
+    "main.bcceace3.js.map": "/static/js/main.bcceace3.js.map",
+    "787.a46c5e3c.chunk.js.map": "/static/js/787.a46c5e3c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.395d129e.css",
+    "static/js/main.bcceace3.js"
+  ]
+}
